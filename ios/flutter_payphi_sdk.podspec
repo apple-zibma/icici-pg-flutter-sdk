@@ -25,7 +25,7 @@ DESC
 
   s.dependency 'Flutter'
 
-  # If the customersdk.framework is built as a static XCFramework and you
-  # see duplicate symbol or linking issues, uncomment:
-  # s.static_framework = true
+  # Static framework is required for vendored Swift frameworks to properly
+  # link their Swift types (AppInitializationListener, PayPhiSdk, etc.)
+  s.static_framework = true
 end
